@@ -72,10 +72,13 @@ header {
     gap: 2rem;
     padding: 2rem;
 }
-.post-image {
-width: 600px;
-height: 300px;
+.post-image img {
+    width: 600px;
+    height: 300px;
+    object-fit: cover; /* ensures image doesn't stretch */
+    border-radius: 8px;
 }
+
 .post-card {
     background-color: var(--card-bg);
     border-radius: 12px;
