@@ -47,3 +47,32 @@ footer a { color: var(--accent-color); }
 #scrollTopBtn:hover { transform: scale(1.2); }
 
 @media(max-width: 900px){ .cards-grid{grid-template-columns:1fr;} }
+
+.hero-image {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 1200px; /* optional max width */
+    height: auto;
+    border-radius: 15px; /* optional rounded corners */
+    box-shadow: 0 8px 25px rgba(0, 240, 255, 0.3); /* optional shadow */
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03); /* subtle zoom effect on hover */
+}
+
+@media(max-width: 768px) {
+    .hero-image img {
+        max-width: 95%;
+    }
+}
+
