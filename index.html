@@ -1,108 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NextGenToolbox - Discover and download the best free AI tools, open-source software, productivity apps, and creative games for Windows, macOS, and Linux." />
-  <meta name="keywords" content="AI tools, open source software, productivity apps, free games, offline software, AI upscaler, GIMP, OBS Studio, NextGenToolbox" />
-  <meta name="author" content="NextGenToolbox Team" />
-  <title>NextGenToolbox | Free AI Tools, Software & Games</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/45/Lightbulb_icon.svg" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NextGenToolbox - Free AI tools, open-source software, creative games, tutorials and guides. Explore and download top tools.">
+<meta name="keywords" content="AI tools, open source software, Blender, ComfyUI, Ovi AI, Jan AI, Everywhere AI, Inkspace, Git, Arattai">
+<title>NextGenToolbox | AI Tools, Open Source Software & Games</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/45/Lightbulb_icon.svg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
-  <!-- Navbar -->
-  <header>
-    <div class="logo">⚙️ NextGenToolbox</div>
-    <nav>
-      <ul class="nav-links">
+
+<!-- Sidebar for mobile -->
+<div class="sidebar" id="sidebar">
+    <div class="close-btn" id="closeSidebar"><i class="fas fa-times"></i></div>
+    <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#tools">Tools</a></li>
+        <li><a href="#tools">AI Tools</a></li>
         <li><a href="#software">Software</a></li>
         <li><a href="#games">Games</a></li>
+        <li><a href="#tutorials">Tutorials</a></li>
         <li><a href="#about">About</a></li>
-      </ul>
-      <div class="theme-toggle" id="theme-toggle">🌙</div>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to <span>NextGenToolbox</span></h1>
-    <p>Explore the future of technology with free AI tools, open-source software, and creative apps — all in one place.</p>
-    <a href="#posts" class="cta-btn">Discover Now 🚀</a>
-    <input type="text" id="search" placeholder="🔍 Search AI tools, software, or games...">
-  </section>
-
-  <!-- Featured Tools Section -->
-  <section id="posts" class="posts-container">
-    <h2 class="section-title">🔥 Trending AI Tools</h2>
-    
-    <div class="post-card" data-title="GIMP Offline Installation">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gimp_2.10.12.svg" alt="GIMP" />
-      <h3>GIMP Offline Installation</h3>
-      <p>Install GIMP offline easily — perfect for artists and designers who want a Photoshop alternative without internet dependency.</p>
-      <a href="posts/gimp.html" class="read-more">Read More</a>
-    </div>
-
-    <div class="post-card" data-title="UPScayl AI Upscaler">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/AI_icon.png" alt="UPScayl" />
-      <h3>UPScayl AI Upscaler</h3>
-      <p>Upscale your images up to 4x using AI with UPScayl — works offline on Windows, macOS, and Linux.</p>
-      <a href="posts/upscayl.html" class="read-more">Read More</a>
-    </div>
-
-    <div class="post-card" data-title="OBS Studio Setup">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/OBS_Studio_Logo.svg" alt="OBS Studio" />
-      <h3>OBS Studio Setup</h3>
-      <p>Master OBS Studio — stream, record, and create content like a pro. Learn setup tips, plugins, and performance tweaks.</p>
-      <a href="posts/obs.html" class="read-more">Read More</a>
-    </div>
-  </section>
-
-  <!-- Open Source Software Section -->
-  <section id="software" class="category-section">
-    <h2 class="section-title">🧠 Open Source Software</h2>
-    <p>Explore powerful, community-driven software that rivals paid alternatives — all 100% free and secure.</p>
-    <ul class="software-list">
-      <li><strong>Blender:</strong> 3D creation suite for animation, modeling, and rendering.</li>
-      <li><strong>Inkscape:</strong> Professional vector graphics editor.</li>
-      <li><strong>Audacity:</strong> Free audio editing and recording tool.</li>
-      <li><strong>Krita:</strong> Digital painting for artists and illustrators.</li>
     </ul>
-  </section>
+</div>
 
-  <!-- Games Section -->
-  <section id="games" class="category-section">
-    <h2 class="section-title">🎮 Free & Open Source Games</h2>
-    <p>Enjoy free, open-source games that push creativity and fun without any microtransactions.</p>
-    <div class="game-gallery">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/SuperTux_icon.png" alt="SuperTux" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/0ad_icon.svg" alt="0 A.D. Game" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/OpenTTD_logo.svg" alt="OpenTTD" />
+<!-- Navbar -->
+<header>
+    <div class="logo">⚙️ NextGenToolbox</div>
+    <nav>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#tools">AI Tools</a></li>
+            <li><a href="#software">Software</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#tutorials">Tutorials</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div class="theme-toggle" id="theme-toggle">🌙</div>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section with animated background -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <h1>NextGenToolbox</h1>
+        <p>Your hub for AI tools, open-source software, and creative apps. Download, explore, and learn!</p>
+        <a href="#tools" class="cta-btn">Explore Tools 🚀</a>
+        <input type="text" id="search" placeholder="Search AI tools, software, or games...">
     </div>
-  </section>
+</section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About NextGenToolbox</h2>
-    <p>
-      NextGenToolbox is your destination for discovering the best free AI tools, open-source software, and creative apps. 
-      Our mission is to empower users with knowledge, simplify installation processes, and help you make the most of next-gen technology.
-    </p>
-    <p>
-      Whether you’re a developer, designer, gamer, or curious tech enthusiast — we bring hand-picked guides and updates 
-      to help you stay ahead in the digital world.
-    </p>
-  </section>
+<!-- AI Tools Section -->
+<section id="tools" class="section">
+    <h2 class="section-title">🔥 Top AI Tools</h2>
+    <div class="cards-grid" id="tools-container">
+        <!-- Ovi AI -->
+        <div class="card" data-title="Ovi AI Video Generator">
+            <img src="https://img.freepik.com/premium-photo/ovi-3d-sky-realistic-image-flying-saucers_739590-167.jpg" alt="Ovi AI">
+            <h3>Ovi AI Video Generator</h3>
+            <p>Create stunning AI-generated videos in seconds. Perfect for marketers, creators, and storytellers.</p>
+            <a href="https://firethering.com/ovi-ai-video-audio-generator-in-comfyui-best-open-source-alternative-to-veo-3-sora-2/" class="btn">Learn More</a>
+        </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 <strong>NextGenToolbox</strong> | Empowering Open Source Innovation 🌍</p>
-    <p><a href="https://nextgentoolbox.com" target="_blank" rel="noopener">Visit Main Site</a></p>
-  </footer>
+        <!-- Jan AI -->
+        <div class="card" data-title="Jan AI">
+            <img src="https://jan.ai/assets/images/general/og-image.png" alt="Jan AI">
+            <h3>Jan AI</h3>
+            <p>Personal AI assistant to automate tasks, schedule reminders, and manage your workflow effortlessly.</p>
+            <a href="https://www.jan.ai/" class="btn">Learn More</a>
+        </div>
 
-  <script src="js/main.js"></script>
+        <!-- Everywhere AI -->
+        <div class="card" data-title="Everywhere AI Assistant">
+            <img src="data:image/jpeg;base64,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" alt="Everywhere AI">
+            <h3>Everywhere AI Assistant</h3>
+            <p>Seamlessly integrates AI assistance across devices and apps — stay productive everywhere.</p>
+            <a href="https://firethering.com/everywhere-ai-the-ultimate-context-aware-ai-assistant-for-windows-macos-linux/" class="btn">Learn More</a>
+        </div>
+
+        <!-- Inkspace -->
+        <div class="card" data-title="Inkspace">
+            <img src="data:image/jpeg;base64,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" alt="Inkspace">
+            <h3>Inkspace</h3>
+            <p>Vector graphics editor for professional design, illustration, and creativity — free and open source.</p>
+            <a href="https://inkscape.org/release" class="btn">Learn More</a>
+        </div>
+
+        <!-- Comfy UI -->
+        <div class="card" data-title="Comfy UI">
+            <img src="https://preview.redd.it/comfyui-appreciation-post-v0-jy1umehnchhe1.png?width=2940&format=png&auto=webp&s=3c81b15648e229b0ca0625fce34698cb66cb7be5" alt="Comfy UI">
+            <h3>Comfy UI</h3>
+            <p>AI model management and workflow interface — visualize and control AI models with ease.</p>
+            <a href="https://firethering.com/comfyui-free-open-source-node-based-workflow-ui-for-ai-image-generation-with-stable-diffusion-loras-controlnet-more/" class="btn">Learn More</a>
+        </div>
+
+        <!-- Blender -->
+        <div class="card" data-title="Blender">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Blender_logo_no_text.svg" alt="Blender">
+            <h3>Blender</h3>
+            <p>Open-source 3D creation suite for modeling, animation, rendering, and visual effects.</p>
+            <a href="https://www.blender.org/features/" class="btn">Learn More</a>
+        </div>
+
+        <!-- Git -->
+        <div class="card" data-title="Git Version Control">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE9yl6D6OEj6ZkGJCqi3RaRnROvZw8J5R0mg&s" alt="Git">
+            <h3>Git Version Control</h3>
+            <p>Track code changes, collaborate with teams, and manage projects efficiently using Git.</p>
+            <a href="https://git-scm.com/" class="btn">Learn More</a>
+        </div>
+
+        <!-- Arattai -->
+        <div class="card" data-title="Arattai">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkNxHelgKy17XKNEuBfd12tjSx52SnTqkcJw&s" alt="Arattai">
+            <h3>Arattai</h3>
+            <p>Open-source communication platform for team messaging and collaboration.</p>
+            <a href="https://firethering.com/arattai-the-best-free-whatsapp-alternative-for-chat-calling-on-windows-linux-macos/" class="btn">Learn More</a>
+        </div>
+
+
+        
+
+
+    </div>
+</section>
+
+
+<!-- Software Section -->
+<section id="software" class="section">
+    <h2 class="section-title">Open Source Software For Creators</h2>
+    <div class="cards-grid" id="software-container">
+
+        <!-- GIMP -->
+        <div class="card" data-title="GIMP">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRracxv9FheDkdpPZC6sMtff_u_8EmSE7DzjQ&s" alt="GIMP">
+            <h3>GIMP</h3>
+            <p>Powerful free and open-source image editor, alternative to Photoshop.</p>
+            <a href="posts/gimp.html" class="btn" target="_blank">Official Site</a>
+        </div>
+
+        <!-- OBS Studio -->
+        <div class="card" data-title="OBS Studio">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg5cf9Iyt8svUnMlAKJhhmrUViYB1MfmhIBA&s" alt="OBS Studio">
+            <h3>OBS Studio</h3>
+            <p>Free and open-source software for video recording and live streaming.</p>
+            <a href="posts/obs.html" class="btn" target="_blank">Official Site</a>
+        </div>
+
+        <!-- ESRGAN Upscale -->
+        <div class="card" data-title="ESRGAN">
+            <img src="https://upscayl.github.io/screenshot.png" alt="ESRGAN">
+            <h3>Upscayl</h3>
+            <p>State-of-the-art AI model for high-quality image upscaling.</p>
+            <a href="posts/upscayl.html" class="btn" target="_blank">Read More</a>
+        </div>
+        <div class="card" data-title="ESRGAN">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcDEikW12ubk53FqujGiFFlZjgw9YleOX10w&s" alt="ESRGAN">
+            <h3>ESRGAN</h3>
+            <p>State-of-the-art AI model for high-quality image upscaling.</p>
+            <a href="https://github.com/xinntao/ESRGAN" class="btn" target="_blank">GitHub Repo</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Software Section -->
+<section id="software" class="section">
+    <h2 class="section-title">💻 Open Source Software</h2>
+    <ul class="software-list">
+        <li><strong>Blender:</strong> 3D animation, modeling, and rendering suite.</li>
+        <li><strong>Audacity:</strong> Free audio editing and recording tool.</li>
+        <li><strong>Krita:</strong> Digital painting software for artists and illustrators.</li>
+        <li><strong>Inkscape:</strong> Vector graphics editor for professional designs.</li>
+        <li><strong>Git:</strong> Version control system for collaborative coding.</li>
+        <li><strong>Arattai:</strong> Team communication & collaboration software.</li>
+    </ul>
+</section>
+
+<!-- Games Section -->
+<section id="games" class="section">
+    <h2 class="section-title">🎮 Free & Open Source Games</h2>
+    <div class="cards-grid">
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/SuperTux_icon.png" alt="SuperTux"><h3>SuperTux</h3></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/0ad_icon.svg" alt="0 A.D."><h3>0 A.D.</h3></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/OpenTTD_logo.svg" alt="OpenTTD"><h3>OpenTTD</h3></div>
+    </div>
+</section>
+
+<!-- Tutorials Section -->
+<section id="tutorials" class="section">
+    <h2 class="section-title">📚 Tutorials & Guides</h2>
+    <p>Step-by-step tutorials for AI tools, software, and games. Learn to install, configure, and master your tools like a pro.</p>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <h2 class="section-title">About NextGenToolbox</h2>
+    <p>NextGenToolbox is your destination for discovering free AI tools, open-source software, and creative apps. We provide guides, offline installers, and tutorials for tech enthusiasts, developers, and creators alike.</p>
+</section>
+
+<button id="scrollTopBtn">⬆️</button>
+
+<footer>
+    <p>© 2025 NextGenToolbox | Empowering Open Source Innovation 🌍</p>
+    <p><a href="https://nextgentoolbox.github.io/" target="_blank">NextGenToolBox</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebar = document.getElementById('closeSidebar');
+    hamburger.addEventListener('click', () => { sidebar.classList.add('open'); });
+    closeSidebar.addEventListener('click', () => { sidebar.classList.remove('open'); });
+
+    // Scroll to top
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.onscroll = () => {
+        scrollBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+    };
+    scrollBtn.onclick = () => { window.scrollTo({ top: 0, behavior: 'smooth' }); };
+
+    // Search functionality
+    const searchInput = document.getElementById('search');
+    const toolCards = document.querySelectorAll('#tools-container .card');
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+        toolCards.forEach(card => {
+            const title = card.dataset.title.toLowerCase();
+            card.style.display = title.includes(query) ? 'block' : 'none';
+        });
+    });
+</script>
+
 </body>
 </html>
